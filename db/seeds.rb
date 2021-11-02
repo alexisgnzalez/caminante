@@ -5,3 +5,22 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+puts "Deleting all tours"
+Tour.delete_all
+puts "All tours deleted"
+puts "Getting first user from db"
+alexis = User.first
+
+puts "creating tours"
+10.times do |index|
+  Tour.create(
+    name: "Tour - #{index}",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    rating: 5,
+    long: 2.293765,
+    lat: 48.858626,
+    user: alexis
+  )
+  puts "Created tour #{index}"
+end
