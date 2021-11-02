@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'pages#home'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  root to: 'tours#home'
+  resources :tours do
+    resources :locations, only: %i[new create destroy] do
+      resources :activities, only: %i[new create destroy]
+    end
+    resources :bookings, only: %i[new create destroy]
+    resources :reviews, only: %i[new create destroy]
+  end
 end
