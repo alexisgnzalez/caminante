@@ -1,0 +1,23 @@
+<h1>Hola soy un mapa</h1>
+<%= @tour.name %>
+<%= @tour.locations[0].name %>
+<%= @booking.user %>
+
+<div id="tour"
+  data-name="<%= @tour.name %>"
+  data-description="<%= @tour.description %>"
+  data-long="<%= @tour.long %>"
+  data-lat="<%= @tour.lat %>"
+  data-count-loc="<%= @tour.locations.size %>">
+</div>
+
+
+<% @tour.locations.each do |location| %>
+  <div class='locations'
+    data-name="<%= location.name %>"
+    data-description="<%= location.description %>"
+    data-long=<%= location.long %>
+    data-lat=<%= location.lat %>
+    data-model="<%= location.model.key %>">
+  </div>
+<% end %>
