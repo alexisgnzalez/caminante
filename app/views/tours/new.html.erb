@@ -1,18 +1,17 @@
 <div class="container">
   <div class="row justify-content-center">
-    <div class="col-12 col-sm-6 bg-white form">
-      <h1 class="row justify-content-center pt-1 title font-weight-bold">Add a New Tour</h1>
-        <%= simple_form_for(@tour) do |f| %>
-          <%= f.input :name %>
-          <%= f.input :description %>
-          <%= f.input :lat %>
-          <%= f.input :long %>
-          <!-- <%= f.input :photos, as: :file, input_html: { multiple: true } %> -->
-          <div class= "row justify-content-around mt-5">
-            <%= f.button :submit, class: "btn-up  rounded-pill" %>
-            <%= link_to 'Back', tours_path, class: "btn-back rounded-pill" %>
-          </div>
+    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+    <div class="form-standard">
+      <h2>Add a New Tour</h2>
+      <%= simple_form_for(@tour) do |f| %>
+        <%= f.input :name %>
+        <%= f.input :description %>
+        <%= f.input :long %>
+        <%= f.input :lat %>
+        <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+        <%= f.button :submit, class: "btn btn-primary" %>
       <% end %>
+    </div>
     </div>
   </div>
 </div>
