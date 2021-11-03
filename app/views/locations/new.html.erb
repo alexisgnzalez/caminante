@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+    <div class="form-standard">
+      <h2>Add a New Location</h2>
+      <%= simple_form_for(@location) do |f| %>
+        <%= f.input :name %>
+        <%= f.input :description %>
+        <%= f.input :long %>
+        <%= f.input :lat %>
+        <%= f.association :tour %>
+        <%= f.input :model, as: :file, label: "3D Model" %>
+        <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+        <%= f.button :submit, class: "btn btn-primary" %>
+      <% end %>
+    </div>
+    </div>
+  </div>
+</div>

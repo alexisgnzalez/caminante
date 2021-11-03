@@ -1,0 +1,30 @@
+.tarjeta {
+    width: 345px;
+    height: 180px;
+    border-radius: 20px;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // position: relative;
+    background: #F78B64;
+
+    h1, h3 {
+        color: black;
+    }
+
+    h1 {
+        font-size: 35px;
+        font-weight: bold;
+    }
+
+    .btn {
+        margin-top: 10px;
+    }
+
+    .img-sm {
+        border-radius: 15px ;
+        width: 140px;
+        vertical-align: middle;
+        border-style: none;
+    }
+}
