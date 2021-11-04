@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     resources :bookings, only: %i[new] do
       member do
         get :map
+        get :ar_experience
       end
     end
   end
