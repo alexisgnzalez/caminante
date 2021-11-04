@@ -2,19 +2,25 @@
   background-image: linear-gradient(rgba(255, 227, 227, 0.5),rgba(0, 0, 0, 0.0)), asset-url("banner3.jpg");
   background-size: cover;
   background-position: bottom;
-  text-align: center;
-  height: 690px;
+  background-repeat: no-repeat;
+  text-align: right;
+  height: 100%;
 
 
   h1 {
-    font-size: 35px;
+    font-size: 45px;
     color: #322222;
-    padding: 100px 0px 0px 0px;
+    padding: 40px 0px 0px 0px;
     font-weight: bold;
   }
 
+  .par {
+    font-size: 30px;
+    color: #322222;
+  }
+
   .btn  {
-    margin-top: 100px;
+    margin-top: 19px;
     font-size: 20px;
     color: #fce9e6;
     border: 5px #fce9e6;
@@ -28,20 +34,27 @@
 @media(max-width: 700px) {
   .banner {
     background-image: linear-gradient(rgba(0, 0, 0, 0.0),rgba(255, 227, 227, 0.5)), asset-url("Caminante.jpg");
-    width: 690px;
-    height: 1413px;
     background-position: center 0px;
-    padding: 300px 0px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 244px 0px;
+    height: 100%;
 
     h1 {
-      font-size: 50px;
-      margin-top: -190px;
+      font-size: 25px;
+      margin-top: -225px;
       color: #fce9e6;
     }
 
+    .par {
+      font-size: 15px;
+      color: #fce9e6;
+  }
+
     .btn  {
-      margin-top: 770px;
-      font-size: 40px;
+      margin-top: 399px;
+      font-size: 16px;
       color: #fce9e6;
       border: 5px #fce9e6;
       background-color: #e15b48;
