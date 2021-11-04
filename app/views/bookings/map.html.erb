@@ -1,8 +1,3 @@
-<h1>Hola soy un mapa</h1>
-<%= @tour.name %>
-<%= @tour.locations[0].name %>
-<%= @booking.user %>
-
 <div id="tour"
   data-name="<%= @tour.name %>"
   data-description="<%= @tour.description %>"
@@ -17,12 +12,11 @@
     data-name="<%= location.name %>"
     data-description="<%= location.description %>"
     data-long=<%= location.long %>
-    data-lat=<%= location.lat %>
-    data-model="<%= location.model.key %>">
+    data-lat=<%= location.lat %>>
   </div>
 <% end %>
 
 
 <div id="map"
-     style="width: 100%; height: 700px;"
+     style="width: 110%; height: 720px; margin: 0px"
      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
