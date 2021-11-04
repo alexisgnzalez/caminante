@@ -1,13 +1,13 @@
 <div class="container">
     <div class="row">
-        <div class="col-lg-12 col-sm-4 col-sm-offset-4">
+        <div class="col-lg-6 col-sm-12 col-sm-offset-12">
             <% if @tours.empty? %>
                 <h1 class="justify-content-around">Looks like we didn't find your Motorcycle mate, sorry 😥</h1>
             <% end %>
             <% @tours.each do |tour|%>
                 <div class="<%= tour.id.even? ? "tarjeta-par" : "tarjeta-impar" %> p-3 d-flex justify-content-between mb-2">
                     <div>
-                        <h1 class="text-sm-left text-md-left text-lg-left text-xl-left"><%= tour.name%></h1>
+                        <h1><%= tour.name%></h1>
                         <div class="estrellas mb-3">
                             <button>
                                 <i class="fas fa-star"></i>
@@ -24,7 +24,7 @@
                             <button>
                                 <i class="fas fa-star"></i>
                             </button>
-                        </div>
+                        </div> <!-- estrellas -->
                         <%= link_to "More Info", tour_path(tour), class: "btn-more-info" %>
                     </div>
                     <%= image_tag "PlazaBolivar.jpg", alt: "plaza simon bolivar", class: "img-sm" %>
