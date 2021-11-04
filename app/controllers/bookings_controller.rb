@@ -12,4 +12,9 @@ class BookingsController < ApplicationController
     @tour = Tour.find(params[:tour_id])
     @booking = Booking.find(params[:id])
   end
+
+  def ar_experience
+    @tour = Tour.find(params[:tour_id])
+    @booking = Booking.find(params[:id])
+  end
 end
