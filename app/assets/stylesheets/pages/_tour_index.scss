@@ -1,10 +1,14 @@
 .tarjeta-par {
-    width: 345px;
+    position: relative;
+    width: 100%;
     height: 190px;
     border-radius: 20px;
     background: #F78B64;
-    margin-top: 47px;
+    margin-top: 24px;
     transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    // z-index: 10;
     &:hover {
         // -webkit-box-shadow: inset 0px 0px 20px 5px rgba(178,232,255,1);
         // -moz-box-shadow: inset 0px 0px 20px 5px rgba(178,232,255,1);
@@ -21,7 +25,7 @@
 
     .estrellas {
         display: flex;
-        font-size: 24px;
+        font-size: 25px;
     }
     .estrellas button {
         background-color: initial;
@@ -61,19 +65,47 @@
 
     .img-sm {
         border-radius: 15px ;
-        width: 140px;
+        width: 150px;
         vertical-align: middle;
         border-style: none;
     }
 }
 
+.second-card-impar {
+  position: absolute;
+  bottom: -15%;
+  z-index: -1;
+//   margin-left: 25px !important;
+  background: #8E6AB0;
+  border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+//   height: 190px;
+  pointer-events: none;
+}
+
+.second-card-par {
+    position: absolute;
+    bottom: -15%;
+    z-index: -1;
+    // margin-left: 25px !important;
+    background: #F78B64;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    // height: 190px;
+    pointer-events: none;
+}
+
 .tarjeta-impar {
-    width: 345px;
-    height: 180px;
+    position: relative;
+    width: 100%;
+    height: 190px;
     border-radius: 20px;
     background: #8E6AB0;
-    margin-top: 47px;
+    margin-top: 24px;
     transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    // z-index: 10;
     &:hover {
         // -webkit-box-shadow: inset 0px 0px 20px 5px rgba(178,232,255,1);
         // -moz-box-shadow: inset 0px 0px 20px 5px rgba(178,232,255,1);
@@ -130,7 +162,7 @@
 
     .img-sm {
         border-radius: 15px ;
-        width: 140px;
+        width: 150px;
         vertical-align: middle;
         border-style: none;
     }
