@@ -10,3 +10,15 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.logo {
+ color: blueviolet;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: blueviolet;
+}
+
+.navbar-light .navbar-nav .active > .nav-link {
+  color: rgb(6, 21, 238);
+}
