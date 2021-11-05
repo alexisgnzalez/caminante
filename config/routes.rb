@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'tours#home'
   resources :tours do
+    collection do
+      get :rockefeller
+    end
     resources :bookings, only: %i[new] do
       member do
         get :map
