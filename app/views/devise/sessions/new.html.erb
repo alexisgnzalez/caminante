@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container mt-5">
   <div class="row justify-content-center">
     <div class="col-xs-12 col-sm-6 col-sm-offset-3">
       <div class="form-standard">
@@ -12,7 +12,7 @@
                         input_html: { autocomplete: "email" }, placeholder: "bob@gmail.com" %>
             <%= f.input :password,
                         required: false,
-                        input_html: { autocomplete: "current-password" } %>
+                        input_html: { autocomplete: "current-password" }, placeholder: "******" %>
             <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
           </div>
         
