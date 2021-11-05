@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background-image: linear-gradient(0, #787874 0, #505467 25%, #1f3259 50%, #00154b 75%, #00003e 100%);
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -12,13 +12,44 @@
 }
 
 .logo {
- color: blueviolet;
+ color: #fce9e6;
+ font-weight: bold;
 }
 
 .navbar-light .navbar-nav .nav-link {
-  color: blueviolet;
+  color: #fce9e6;
+  font-weight: bold;
+      &:hover {
+      color: #fce9e6;
+      font-weight: bold;
+      background-color: #e15b48;
+      border-radius: 7px;
+    }
 }
 
 .navbar-light .navbar-nav .active > .nav-link {
-  color: rgb(6, 21, 238);
+  color: #fce9e6;
+    &:hover {
+      color: #fce9e6;
+      font-weight: bold;
+      background-color: #e15b48;
+    }
+}
+
+.dropdown-menu {
+  background-image: linear-gradient(0, #787874 0, #505467 25%, #1f3259 50%, #00154b 75%, #00003e 100%);
+}
+
+.dropdown-item {
+  color: #fce9e6;
+  font-weight: bold;
+    &:hover {
+    color: #fce9e6;
+    font-weight: bold;
+    background-color: #e15b48;
+  }
+}
+
+.navbar-color{
+  background-image: linear-gradient(0, #787874 0, #505467 25%, #1f3259 50%, #00154b 75%, #00003e 100%);
 }

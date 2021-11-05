@@ -13,12 +13,13 @@
 @import "pages/index";
 
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: $body-font;
 }
 
 body {
-    color: #FCE9E6;
-    margin: 0px;
-
+  color: #FCE9E6;
+  padding-top: 55px;
 }
