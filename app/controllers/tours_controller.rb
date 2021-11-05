@@ -42,6 +42,9 @@ class ToursController < ApplicationController
     redirect_to tours_path
   end
 
+  def rockefeller
+  end
+
   private
 
   def tour_params
