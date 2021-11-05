@@ -25,13 +25,14 @@
 
     .estrellas {
         display: flex;
-        font-size: 25px;
+        font-size: 20px;
     }
     .estrellas button {
         background-color: initial;
         border: 0;
         color: #8E6AB0;
         transition: 0.5s all;
+        font-weight: bold;
     }
     .estrellas button:active, button:hover {
         cursor: pointer;
@@ -122,12 +123,12 @@
 
     .estrellas {
         display: flex;
-        font-size: 24px;
+        font-size: 20px;
     }
     .estrellas button {
         background-color: initial;
         border: 0;
-        color: #ffffff;
+        color: #F78B64;
         transition: 0.5s all;
     }
     .estrellas button:active, button:hover {
