@@ -6,6 +6,12 @@
   <%# <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
   <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane> %>
   <%# <a-sky color="#ECECEC"></a-sky> %>
-  <a-box color="blue" position="0 2 -5" rotation="0 45 45" scale="2 2 2"
-         animation="property: object3D.position.y; to: 2.2; dir: alternate; dur: 2000; loop: true"></a-box>
+  <a-box color="blue" position="0 2 -8" rotation="0 45 45" scale="2 2 2"
+         animation="property: object3D.position.y; to: 2.2; dir: alternate; dur: 2000; loop: true">
+  </a-box>
+
+  <a-entity
+    gltf-model= "<%= cl_image_tag @tour.locations[0].model.key %>"
+    position="-2.5 2 -8">
+  </a-entity>
 </a-scene>
