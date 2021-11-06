@@ -42,24 +42,28 @@
 				<h2><%= @tour.name %></h2>
 				<div class="estrellas mb-3 mt-2">
 					<button>
-						<i class="fas fa-star"></i>
+						<i class="bi bi-star-fill"></i>
 					</button>
 					<button>
-						<i class="fas fa-star"></i>
+						<i class="bi bi-star-fill"></i>
 					</button>
 					<button>
-						<i class="fas fa-star"></i>
+						<i class="bi bi-star-fill"></i>
 					</button>
 					<button>
-						<i class="fas fa-star"></i>
+						<i class="bi bi-star-fill"></i>
 					</button>
 					<button>
-						<i class="fas fa-star"></i>
+						<i class="bi bi-star-fill"></i>
 					</button>
 				</div> <!-- estrellas -->
 			</div>
 
 			<div class="card-body text-center tarjeta-description mt-3">
+				<p><%= @tour.description %></p>
+			</div>
+
+			<div class="card-body text-center tarjeta-description mt-3 mb-5">
 				<p><%= @tour.description %></p>
 			</div>
 
