@@ -25,6 +25,7 @@ require("channels")
 
 // External imports
 import "bootstrap";
+import 'bootstrap-icons/font/bootstrap-icons.css'
 import { initMap } from '../plugins/init_map';
 import { initUpdateNavbarOnScroll } from '../components/navbar';
 
