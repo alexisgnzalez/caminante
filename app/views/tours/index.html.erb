@@ -28,8 +28,8 @@
               </div> <!-- estrellas -->
               <%= link_to "More Info", tour_path(tour), class: "btn-more-info" %>
             </div>
-            <%# <%= image_tag "PlazaBolivar.jpg", alt: "plaza simon bolivar", class: "img-sm" %>
-            <%= cl_image_tag tour.photos.key, class: "d-block w-150" %>
+            <%= image_tag "PlazaBolivar.jpg", alt: "plaza simon bolivar", class: "img-sm" %>
+            <%# <%= cl_image_tag tour.photos.key, class: "d-block w-150" %>
           </div>
           <div class="<%= tour.id.even? ? "second-card-impar" : "second-card-par" %> p-3 w-75"></div> <!-- second-card -->
         </div> <!-- tarjeta -->
