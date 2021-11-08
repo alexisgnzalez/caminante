@@ -4,8 +4,8 @@
       <% if @tours.empty? %>
         <h2 class="d-flex justify-content-center align-items-center bg-white p-2 rounded mt-5"><strong>Looks like we didn't find your Tour mate, sorry 😥</strong></h2>
       <% end %>
-      <% @tours.each do |tour|%>
-        <div class="<%= tour.id.even? ? "tarjeta-par" : "tarjeta-impar" %> d-flex justify-content-center mb-4">
+      <% @tours.each_with_index do |tour|%>
+        <div class="<%= tour.id.even? ? "tarjeta-par" : "tarjeta-impar" %> d-flex justify-content-center mb-5">
           <div class="d-flex justify-content-between p-3 px-lg-5 w-100">
             <div>
               <h1><%= tour.name%></h1>
