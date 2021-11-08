@@ -4,11 +4,13 @@
   bottom: 0;
   width: 100%;
   z-index: 1055;
+  padding: 5px 0px;
 
-  .fas {
+  .bi {
     color: #322222;
-    font-size: 26px;
-    padding: 15px 30px;
+    font-size: 31px;
+
+    padding: 23px 30px;
       &:hover {
       color: #e15b48;
       font-weight: bold;
