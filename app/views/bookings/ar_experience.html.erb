@@ -11,15 +11,15 @@
   </a-box> %>
 
   <a-entity
-    gltf-model= <%= "#{cloudinary_url(@tour.locations[0].model.key, :resource_type => :raw)}.glb" %>
+    gltf-model= <%= "#{cloudinary_url(@tour.locations[@booking.counter].model.key, :resource_type => :raw)}.glb" %>
     scale="0.07 0.07 0.07"
-    position="0 0 -15"
+    position="0 0 -10"
     animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
   </a-entity>
 
   <a-text
     font="kelsonsans"
-    value="<%= @tour.locations[0].name %>"
+    value="<%= @tour.locations[@booking.counter].name %>"
     width="6" position="-1.1 0.6 -5"
     rotation="0 1 0">
   </a-text>

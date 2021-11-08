@@ -20,11 +20,11 @@
 						<% @tour.photos.each_with_index do |photos, index| %>
 							<% if index == 0 %>
 								<div class="carousel-item active">
-									<%= cl_image_tag @tour.photos.key, class: "d-block w-100" %>
+									<%= cl_image_tag @tour.photos.first.key, class: "d-block w-100" %>
 								</div>
 							<% else %>
 								<div class="carousel-item">
-									<%= cl_image_tag @tour.photos.key, class: "d-block w-100" %>
+									<%= cl_image_tag @tour.photos.first.key, class: "d-block w-100" %>
 								</div>
 							<% end %>
 						<% end %>
