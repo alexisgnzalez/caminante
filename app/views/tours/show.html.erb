@@ -1,7 +1,7 @@
 <div>
 
-	<div class="area" >
-		<ul class="circles">
+	<div class="s-area" >
+		<ul class="s-circles">
 			<li></li>
 			<li></li>
 			<li></li>
@@ -84,11 +84,11 @@
 				</div>
 
 				<div class="card-body text-center tarjeta-title-rating mt-3 mb-3">
-					<h2>Locations</h2>
+					<h2 class="texto">Locations</h2>
 				</div>
 
-				<div class="card-body text-left tarjeta-locat mt-1 mb-3">
-					<% @tour.locations.each_with_index do |location, index|%>
+				<% @tour.locations.each_with_index do |location, index|%>
+					<div class="card-body text-left tarjeta-locat mt-1 mb-3">
 						<h3 class="text-center"><%= location.name %></h3><br>
 						<p><%= location.description %></p>
 						<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
@@ -127,17 +127,11 @@
 								<span class="sr-only">Next</span>
 							</button>
 						</div> <!-- carrusel -->
-					<% end %>
-				</div>
-
+					</div>
+				<% end %>
+				<br>
 			</div> <!-- efecto -->
 		</div> <!-- row -->
 	</div> <!-- container -->
 
-<<<<<<< HEAD
-		</div> <!-- efecto -->
-	</div> <!-- row -->
-</div> <!-- container -->
-=======
 </div>
->>>>>>> development
