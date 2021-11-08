@@ -1,11 +1,11 @@
-<div class="container mt-5">
+<div class="container mt-5 ">
   <div class="row justify-content-center">
     <div class="col-lg-6 col-sm-4 col-sm-offset-4 justify-content-center d-flex flex-column align-items-center">
       <% if @tours.empty? %>
         <h1 class="justify-content-around">Looks like we didn't find your Motorcycle mate, sorry 😥</h1>
       <% end %>
-      <% @tours.each do |tour|%>
-        <div class="<%= tour.id.even? ? "tarjeta-par" : "tarjeta-impar" %> d-flex justify-content-center mb-4">
+      <% @tours.each_with_index do |tour|%>
+        <div class="<%= tour.id.even? ? "tarjeta-par" : "tarjeta-impar" %> d-flex justify-content-center mb-5">
           <div class="d-flex justify-content-between p-3 px-lg-5 w-100">
             <div>
               <h1><%= tour.name%></h1>
@@ -31,6 +31,7 @@
             <%= image_tag "PlazaBolivar.jpg", alt: "plaza simon bolivar", class: "img-sm" %>
           </div>
           <%# <%= cl_image_tag tour.photos.first.key %>
+          <%= %>
           <div class="<%= tour.id.even? ? "second-card-impar" : "second-card-par" %> p-3 w-75"></div> <!-- second-card -->
         </div> <!-- tarjeta -->
       <% end %>
