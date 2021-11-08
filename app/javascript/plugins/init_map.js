@@ -16,12 +16,22 @@ const initMap = () => {
       zoom: 16.5
     });
 
-    locations.forEach(location => {
-      new mapboxgl.Marker({
-        'name': location.dataset.name
-      })
-          .setLngLat([location.dataset.long, location.dataset.lat])
-          .addTo(map);
+    locations.forEach((location, index) => {
+      console.log(tour.counter)
+      if (tour.dataset.counter == (index - 1)) {
+        new mapboxgl.Marker({
+          'name': location.dataset.name,
+          'color': 'red'
+        })
+            .setLngLat([location.dataset.long, location.dataset.lat])
+            .addTo(map);
+      } else {
+        new mapboxgl.Marker({
+          'name': location.dataset.name
+        })
+            .setLngLat([location.dataset.long, location.dataset.lat])
+            .addTo(map);
+      }
     });
 
     map.on('load', () => {
