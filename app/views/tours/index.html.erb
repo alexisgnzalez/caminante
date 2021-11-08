@@ -2,7 +2,7 @@
   <div class="row justify-content-center">
     <div class="col-lg-6 col-sm-4 col-sm-offset-4 justify-content-center d-flex flex-column align-items-center">
       <% if @tours.empty? %>
-        <h1 class="justify-content-around">Looks like we didn't find your Motorcycle mate, sorry 😥</h1>
+        <h2 class="d-flex justify-content-center align-items-center bg-white p-2 rounded mt-5"><strong>Looks like we didn't find your Tour mate, sorry 😥</strong></h2>
       <% end %>
       <% @tours.each do |tour|%>
         <div class="<%= tour.id.even? ? "tarjeta-par" : "tarjeta-impar" %> d-flex justify-content-center mb-4">
@@ -28,8 +28,12 @@
               </div> <!-- estrellas -->
               <%= link_to "More Info", tour_path(tour), class: "btn-more-info" %>
             </div>
-            <%= image_tag "PlazaBolivar.jpg", alt: "plaza simon bolivar", class: "img-sm" %>
-            <%# <%= cl_image_tag tour.photos.key, class: "d-block w-150" %>
+            <% if tour.photos.empty? %>
+              <%= cl_image_tag "https://res.cloudinary.com/alexisgonzalez/image/upload/v1636379461/tour_placeholder_pxovv7.jpg", alt: "Tour", class: "img-sm" %>
+            <% else %>
+              <%= cl_image_tag tour.photos.first.key, class: "d-block w-150" %>
+            <% end %>
+            
           </div>
           <div class="<%= tour.id.even? ? "second-card-impar" : "second-card-par" %> p-3 w-75"></div> <!-- second-card -->
         </div> <!-- tarjeta -->
