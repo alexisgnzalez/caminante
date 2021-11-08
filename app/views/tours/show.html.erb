@@ -5,26 +5,26 @@
 				<div class="carousel-inner">
 					<% if @tour.photos.empty? %>
 						<div class="carousel-item active">
-							<%= cl_image_tag "https://res.cloudinary.com/alexisgonzalez/image/upload/v1636379461/tour_placeholder_pxovv7.jpg", alt: "Tour", class: "d-block w-150" %>
+							<%= cl_image_tag "https://res.cloudinary.com/alexisgonzalez/image/upload/v1636379461/tour_placeholder_pxovv7.jpg", alt: "Tour", class: "d-block w-100 br" %>
 							<%# <%= cl_image_tag @tour.photos.key, class: "d-block w-100" %>
 						</div>
 						<div class="carousel-item">
-							<%= cl_image_tag "https://res.cloudinary.com/alexisgonzalez/image/upload/v1636379461/tour_placeholder_pxovv7.jpg", alt: "Tour", class: "d-block w-150" %>
+							<%= cl_image_tag "https://res.cloudinary.com/alexisgonzalez/image/upload/v1636379461/tour_placeholder_pxovv7.jpg", alt: "Tour", class: "d-block w-100 br" %>
 							<%# <%= cl_image_tag @tour.photos.key, class: "d-block w-100" %>
 						</div>
 						<div class="carousel-item">
-							<%= cl_image_tag "https://res.cloudinary.com/alexisgonzalez/image/upload/v1636379461/tour_placeholder_pxovv7.jpg", alt: "Tour", class: "d-block w-150" %>
+							<%= cl_image_tag "https://res.cloudinary.com/alexisgonzalez/image/upload/v1636379461/tour_placeholder_pxovv7.jpg", alt: "Tour", class: "d-block w-100 br" %>
 							<%# <%= cl_image_tag @tour.photos.key, class: "d-block w-100" %>
 						</div>
 					<% else %>
 						<% @tour.photos.each_with_index do |photo, index| %>
 							<% if index == 0 %>
 								<div class="carousel-item active">
-									<%= cl_image_tag photo.key, class: "d-block w-150" %>
+									<%= cl_image_tag photo.key, class: "d-block w-100 br" %>
 								</div>
 							<% else %>
 								<div class="carousel-item">
-									<%= cl_image_tag photo.key, class: "d-block w-150" %>
+									<%= cl_image_tag photo.key, class: "d-block w-100 br" %>
 								</div>
 							<% end %>
 						<% end %>
@@ -41,8 +41,8 @@
 				<%= link_to "Start", new_tour_booking_path(@tour), class: "btn-start text-uppercase text-decoration-none" %>
 			</div> <!-- carrusel -->
 
-			<div class="card-body text-center bg-white tarjeta-title-rating mt-5">
-				<h2><%= @tour.name %></h2>
+			<div class="card-body text-center tarjeta-title-rating mt-5">
+				<h2 class="texto"><%= @tour.name %></h2>
 				<div class="estrellas mb-3 mt-2">
 					<button>
 						<i class="bi bi-star-fill"></i>
@@ -62,12 +62,55 @@
 				</div> <!-- estrellas -->
 			</div>
 
-			<div class="card-body text-center tarjeta-description mt-3">
+			<div class="card-body text-left tarjeta-description mt-3">
 				<p><%= @tour.description %></p>
 			</div>
 
-			<div class="card-body text-center tarjeta-description mt-3 mb-5">
-				<p><%= @tour.description %></p>
+			<div class="card-body text-center tarjeta-title-rating mt-3 mb-3">
+				<h2>Locations</h2>
+			</div>
+
+			<div class="card-body text-left tarjeta-locat mt-1 mb-3">
+				<% @tour.locations.each_with_index do |location, index|%>
+					<h3 class="text-center"><%= location.name %></h3><br>
+					<p><%= location.description %></p>
+					<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+						<div class="carousel-inner d-flex justify-content-center">
+							<% if location.photos.empty? %>
+								<div class="carousel-item active">
+									<%= cl_image_tag "https://res.cloudinary.com/alexisgonzalez/image/upload/v1636379461/tour_placeholder_pxovv7.jpg", alt: "Tour", class: "w-75 br" %>
+								</div>
+								<div class="carousel-item">
+									<%= cl_image_tag "https://res.cloudinary.com/alexisgonzalez/image/upload/v1636379461/tour_placeholder_pxovv7.jpg", alt: "Tour", class: "w-75 br" %>
+								</div>
+								<div class="carousel-item">
+									<%= cl_image_tag "https://res.cloudinary.com/alexisgonzalez/image/upload/v1636379461/tour_placeholder_pxovv7.jpg", alt: "Tour", class: "w-75 br" %>
+								</div>
+							<% else %>
+								<% location.photos.each_with_index do |photo, index| %>
+									<% if index == 0 %>
+										<div class="carousel-item active">
+											<%= cl_image_tag photo.key, class: "d-block w-75 br" %>
+										</div>
+									<% else %>
+										<div class="carousel-item">
+											<%= cl_image_tag photo.key, class: "d-block w-75 br" %>
+										</div>
+									<% end %>
+								<% end %>
+								<%= cl_image_tag location.photos.first.key, class: "w-75 br" %>
+							<% end %>
+						</div>
+						<button class="carousel-control-prev" type="button" data-target="#carouselExampleFade" data-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="sr-only">Previous</span>
+						</button>
+						<button class="carousel-control-next" type="button" data-target="#carouselExampleFade" data-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="sr-only">Next</span>
+						</button>
+					</div> <!-- carrusel -->
+				<% end %>
 			</div>
 
 		</div> <!-- efecto -->

@@ -9,7 +9,7 @@
           <div class="d-flex justify-content-between p-3 px-lg-5 w-100">
             <div>
               <h1><%= tour.name%></h1>
-              <div class="estrellas mb-4">
+              <div class="estrellas mb-3">
                 <button>
                   <i class="bi bi-star-fill"></i>
                 </button>
@@ -31,12 +31,11 @@
             <% if tour.photos.empty? %>
               <%= cl_image_tag "https://res.cloudinary.com/alexisgonzalez/image/upload/v1636379461/tour_placeholder_pxovv7.jpg", alt: "Tour", class: "img-sm" %>
             <% else %>
-              <%= cl_image_tag tour.photos.first.key, class: "d-block w-150" %>
+              <%= cl_image_tag tour.photos.first.key, class: "img-sm" %>
             <% end %>
-            
           </div>
           <div class="<%= tour.id.even? ? "second-card-impar" : "second-card-par" %> p-3 w-75"></div> <!-- second-card -->
-        </div> <!-- tarjeta -->
+        </div> <!-- tarjeta-par/impar -->
       <% end %>
     </div>
   </div> <!-- row -->
