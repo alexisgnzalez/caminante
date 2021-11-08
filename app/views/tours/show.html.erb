@@ -14,7 +14,7 @@
 			<li></li>
 		</ul>
 	</div>
-	
+
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-lg-6 col-sm-4 col-sm-offset-4 justify-content-center d-flex flex-column align-items-center efecto">
@@ -57,7 +57,7 @@
 					</button>
 					<%= link_to "Start", new_tour_booking_path(@tour), class: "btn-start text-uppercase text-decoration-none" %>
 				</div> <!-- carrusel -->
-	
+
 				<div class="card-body text-center tarjeta-title-rating mt-5">
 					<h2 class="texto"><%= @tour.name %></h2>
 					<div class="estrellas mb-3 mt-2">
@@ -78,15 +78,15 @@
 						</button>
 					</div> <!-- estrellas -->
 				</div>
-	
+
 				<div class="card-body text-left tarjeta-description mt-3">
 					<p><%= @tour.description %></p>
 				</div>
-	
+
 				<div class="card-body text-center tarjeta-title-rating mt-3 mb-3">
 					<h2>Locations</h2>
 				</div>
-	
+
 				<div class="card-body text-left tarjeta-locat mt-1 mb-3">
 					<% @tour.locations.each_with_index do |location, index|%>
 						<h3 class="text-center"><%= location.name %></h3><br>
@@ -129,9 +129,15 @@
 						</div> <!-- carrusel -->
 					<% end %>
 				</div>
-	
+
 			</div> <!-- efecto -->
 		</div> <!-- row -->
 	</div> <!-- container -->
 
+<<<<<<< HEAD
+		</div> <!-- efecto -->
+	</div> <!-- row -->
+</div> <!-- container -->
+=======
 </div>
+>>>>>>> development
