@@ -1,27 +1,30 @@
 <div class="container">
 	<div class="row justify-content-center">
-		<div class="col-lg-6 col-sm-4 col-sm-offset-4 justify-content-center d-flex flex-column align-items-center">
+		<div class="col-lg-6 col-sm-4 col-sm-offset-4 justify-content-center d-flex flex-column align-items-center efecto">
 			<div id="carouselExampleControls" class="carousel slide mt-2 boton d-flex flex-column justify-content-center align-items-center" data-ride="carousel">
 				<div class="carousel-inner">
 					<% if @tour.photos.empty? %>
 						<div class="carousel-item active">
 							<%= image_tag "PlazaBolivar.jpg", class: "d-block w-100", alt: "photo" %>
+							<%# <%= cl_image_tag @tour.photos.key, class: "d-block w-100" %>
 						</div>
 						<div class="carousel-item">
 							<%= image_tag "PlazaBolivar.jpg", class: "d-block w-100", alt: "photo" %>
+							<%# <%= cl_image_tag @tour.photos.key, class: "d-block w-100" %>
 						</div>
 						<div class="carousel-item">
 							<%= image_tag "PlazaBolivar.jpg", class: "d-block w-100", alt: "photo" %>
+							<%# <%= cl_image_tag @tour.photos.key, class: "d-block w-100" %>
 						</div>
 					<% else %>
-						<% @tour.photos.each_with_index do |photo, index| %>
+						<% @tour.photos.each_with_index do |photos, index| %>
 							<% if index == 0 %>
 								<div class="carousel-item active">
-									<%= cl_image_tag photo.key, class: "d-block w-100" %>
+									<%= cl_image_tag @tour.photos.key, class: "d-block w-100" %>
 								</div>
 							<% else %>
 								<div class="carousel-item">
-									<%= cl_image_tag photo.key, class: "d-block w-100" %>
+									<%= cl_image_tag @tour.photos.key, class: "d-block w-100" %>
 								</div>
 							<% end %>
 						<% end %>
@@ -42,19 +45,19 @@
 				<h2><%= @tour.name %></h2>
 				<div class="estrellas mb-3 mt-2">
 					<button>
-						<i class="fas fa-star"></i>
+						<i class="bi bi-star-fill"></i>
 					</button>
 					<button>
-						<i class="fas fa-star"></i>
+						<i class="bi bi-star-fill"></i>
 					</button>
 					<button>
-						<i class="fas fa-star"></i>
+						<i class="bi bi-star-fill"></i>
 					</button>
 					<button>
-						<i class="fas fa-star"></i>
+						<i class="bi bi-star-fill"></i>
 					</button>
 					<button>
-						<i class="fas fa-star"></i>
+						<i class="bi bi-star-fill"></i>
 					</button>
 				</div> <!-- estrellas -->
 			</div>
@@ -63,6 +66,10 @@
 				<p><%= @tour.description %></p>
 			</div>
 
-		</div>
+			<div class="card-body text-center tarjeta-description mt-3 mb-5">
+				<p><%= @tour.description %></p>
+			</div>
+
+		</div> <!-- efecto -->
 	</div> <!-- row -->
 </div> <!-- container -->

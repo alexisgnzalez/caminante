@@ -22,29 +22,36 @@
   .btn-login {
     width: 100%;
     background-color: #E15B48;
-    margin-top: 20px;
-    // margin-bottom: 20px;
     border-radius: 8px;
     color: white;
     font-weight: 600;
-    margin-bottom: 20px;
     display: block;
     padding: 10px 16px;
+    text-decoration: none;
   }
-  .btn-sign-up {
-    padding: 10px 16px;
+  .btn-signup {
+    width: 100%;
     background-color: #F78B64;
     border-radius: 8px;
     color: white;
     font-weight: 600;
+    padding: 10px 16px;
+    text-decoration: none;
+  }
+  .btn-sign-up {
+    background-color: #F78B64;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    padding: 10px 16px;
     text-decoration: none;
   }
   .btn-password {
-    padding: 10px 16px;
     background-color: #AA629F;
     border-radius: 8px;
     color: white;
     font-weight: 600;
+    padding: 10px 16px;
     text-decoration: none;
   }
 }
