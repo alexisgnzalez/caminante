@@ -1,6 +1,7 @@
 class BookingsController < ApplicationController
   def new
     @booking = Booking.new
+    @booking.counter = 0
     @booking.user = current_user
     @booking.tour = Tour.find(params[:tour_id])
     @booking.save
@@ -16,5 +17,7 @@ class BookingsController < ApplicationController
   def ar_experience
     @tour = Tour.find(params[:tour_id])
     @booking = Booking.find(params[:id])
+    @booking.counter += 1
+    @booking.save
   end
 end
