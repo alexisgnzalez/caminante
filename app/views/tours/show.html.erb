@@ -17,14 +17,14 @@
 							<%# <%= cl_image_tag @tour.photos.key, class: "d-block w-100" %>
 						</div>
 					<% else %>
-						<% @tour.photos.each_with_index do |photos, index| %>
+						<% @tour.photos.each_with_index do |photo, index| %>
 							<% if index == 0 %>
 								<div class="carousel-item active">
-									<%= cl_image_tag @tour.photos.key, class: "d-block w-100" %>
+									<%= cl_image_tag photo.key, class: "d-block w-100" %>
 								</div>
 							<% else %>
 								<div class="carousel-item">
-									<%= cl_image_tag @tour.photos.key, class: "d-block w-100" %>
+									<%= cl_image_tag photo.key, class: "d-block w-100" %>
 								</div>
 							<% end %>
 						<% end %>
