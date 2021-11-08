@@ -3,6 +3,7 @@
   data-description="<%= @tour.description %>"
   data-long="<%= @tour.long %>"
   data-lat="<%= @tour.lat %>"
+  data-counter="<%= @booking.counter %>"
   data-count-loc="<%= @tour.locations.size %>">
 </div>
 
@@ -18,5 +19,5 @@
 
 
 <div id="map"
-     style="width: 110%; height: 720px; margin: 0px"
+     style="width: 100%; height: 720px; margin: 0px"
      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
