@@ -1,0 +1,30 @@
+.modal-content {
+  color: #322222;
+  border-radius: 3px;
+  justify-content: center;
+}
+
+.modales {
+  border-radius: 5px;
+  display: block;
+  font-weight: bold;
+}
+.btn-search {
+  width: 100%;
+  background-color: #E15B48;
+  margin-top: 20px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+
+  border: white;
+  padding: 5px;
+  &:hover {
+    background-color: #322222dc;
+    font-weight: bold;
+  }
+}
+
+.modal-title {
+  font-weight: bold;
+}

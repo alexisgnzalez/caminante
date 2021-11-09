@@ -38,3 +38,7 @@ document.addEventListener('turbolinks:load', () => {
   initMap();
   initUpdateNavbarOnScroll();
 });
+
+$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
