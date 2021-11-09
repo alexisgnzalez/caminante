@@ -1,5 +1,4 @@
 <div>
-
 	<div class="s-area" >
 		<ul class="s-circles">
 			<li></li>
@@ -18,7 +17,6 @@
 			<li></li>
 		</ul>
 	</div>
-
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-lg-6 col-sm-4 col-sm-offset-4 justify-content-center d-flex flex-column align-items-center">
@@ -27,15 +25,12 @@
 						<% if @tour.photos.empty? %>
 							<div class="carousel-item active">
 								<%= cl_image_tag "https://res.cloudinary.com/alexisgonzalez/image/upload/v1636379461/tour_placeholder_pxovv7.jpg", alt: "Tour", class: "d-block w-100 br" %>
-								<%# <%= cl_image_tag @tour.photos.key, class: "d-block w-100" %>
 							</div>
 							<div class="carousel-item">
 								<%= cl_image_tag "https://res.cloudinary.com/alexisgonzalez/image/upload/v1636379461/tour_placeholder_pxovv7.jpg", alt: "Tour", class: "d-block w-100 br" %>
-								<%# <%= cl_image_tag @tour.photos.key, class: "d-block w-100" %>
 							</div>
 							<div class="carousel-item">
 								<%= cl_image_tag "https://res.cloudinary.com/alexisgonzalez/image/upload/v1636379461/tour_placeholder_pxovv7.jpg", alt: "Tour", class: "d-block w-100 br" %>
-								<%# <%= cl_image_tag @tour.photos.key, class: "d-block w-100" %>
 							</div>
 						<% else %>
 							<% @tour.photos.each_with_index do |photo, index| %>
@@ -94,7 +89,6 @@
 				<% @tour.locations.each_with_index do |location, index|%>
 					<div class="card-body text-left tarjeta-locat mt-1 mb-3">
 						<h3 class="text-center"><%= location.name %></h3><br>
-						<!-- <p><%= location.description %></p> -->
 						<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
 							<div class="carousel-inner d-flex justify-content-center mb-3">
 								<% if location.photos.empty? %>
@@ -105,7 +99,7 @@
 										<%= cl_image_tag "https://res.cloudinary.com/alexisgonzalez/image/upload/v1636379461/tour_placeholder_pxovv7.jpg", alt: "Tour", class: "w-75 br" %>
 									</div>
 									<div class="carousel-item">
-										<%= cl_image_tag "https://res.cloudinary.com/alexisgonzalez/image/upload/v1636379461/tour_placeholder_pxovv7.jpg", class: "w-75 br" %>
+										<%= cl_image_tag "https://res.cloudinary.com/alexisgonzalez/image/upload/v1636379461/tour_placeholder_pxovv7.jpg", alt: "Tour", class: "w-75 br" %>
 									</div>
 								<% else %>
 									<% location.photos.each_with_index do |photo, index| %>
@@ -135,8 +129,24 @@
 					</div>
 				<% end %>
 				<br>
+
+				<% if @booking.present? && @booking.finished? %>
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-4">
+								<%= simple_form_for [@tour, @booking], url: update_stars_tour_booking_path(@tour) do |f| %>
+									<%= f.input :rating, collection: (1..5).to_a, label: "Rate us" %>
+									<div style="display:none;">
+										<%= f.submit "ok", class: "hidden" %>
+									</div>
+								<% end %>
+							</div>
+						</div>
+					</div>
+				<% end %>
+				<br>
+				
 			</div>
 		</div> <!-- row -->
 	</div> <!-- container -->
-
 </div>
