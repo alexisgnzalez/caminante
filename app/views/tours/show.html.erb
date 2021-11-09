@@ -1,7 +1,11 @@
 <div>
 
-	<div class="area" >
-		<ul class="circles">
+	<div class="s-area" >
+		<ul class="s-circles">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
 			<li></li>
 			<li></li>
 			<li></li>
@@ -17,7 +21,7 @@
 
 	<div class="container">
 		<div class="row justify-content-center">
-			<div class="col-lg-6 col-sm-4 col-sm-offset-4 justify-content-center d-flex flex-column align-items-center efecto">
+			<div class="col-lg-6 col-sm-4 col-sm-offset-4 justify-content-center d-flex flex-column align-items-center">
 				<div id="carouselExampleControls" class="carousel slide mt-2 boton d-flex flex-column justify-content-center align-items-center" data-ride="carousel">
 					<div class="carousel-inner">
 						<% if @tour.photos.empty? %>
@@ -84,13 +88,13 @@
 				</div>
 
 				<div class="card-body text-center tarjeta-title-rating mt-3 mb-3">
-					<h2>Locations</h2>
+					<h2 class="texto">Locations</h2>
 				</div>
 
-				<div class="card-body text-left tarjeta-locat mt-1 mb-3">
-					<% @tour.locations.each_with_index do |location, index|%>
+				<% @tour.locations.each_with_index do |location, index|%>
+					<div class="card-body text-left tarjeta-locat mt-1 mb-3">
 						<h3 class="text-center"><%= location.name %></h3><br>
-						<p><%= location.description %></p>
+						<!-- <p><%= location.description %></p> -->
 						<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
 							<div class="carousel-inner d-flex justify-content-center mb-3">
 								<% if location.photos.empty? %>
@@ -127,17 +131,12 @@
 								<span class="sr-only">Next</span>
 							</button>
 						</div> <!-- carrusel -->
-					<% end %>
-				</div>
-
-			</div> <!-- efecto -->
+						<p><%= location.description %></p>
+					</div>
+				<% end %>
+				<br>
+			</div>
 		</div> <!-- row -->
 	</div> <!-- container -->
 
-<<<<<<< HEAD
-		</div> <!-- efecto -->
-	</div> <!-- row -->
-</div> <!-- container -->
-=======
 </div>
->>>>>>> development
