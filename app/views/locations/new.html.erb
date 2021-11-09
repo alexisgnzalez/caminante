@@ -10,6 +10,7 @@
         <%= f.input :lat %>
         <%= f.association :tour %>
         <%= f.input :model, as: :file, label: "3D Model" %>
+        <%= f.input :view, as: :file, label: "360 View" %>
         <%= f.input :photos, as: :file, input_html: { multiple: true } %>
         <%= f.button :submit, class: "btn-login" %>
       <% end %>
