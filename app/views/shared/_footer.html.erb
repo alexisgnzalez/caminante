@@ -14,22 +14,23 @@
     <a><i class="bi bi-search" data-toggle="modal" data-target="#exampleModal"></i></a>
 
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade rounded-5" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Search Tour</h5>
+            <div>
+              <h5 class="modal-title" id="exampleModalLabel">Search Tour</h5>
+            </div>
             <%= simple_form_for :query, url: tours_path, method: "GET", html: { class: "form-inline search-bar" } do |form| %>
               <div class="form">
-                <%= form.input :tour, label: false, prompt: "All tours" %>
+                <%= form.input :tour, label: false, prompt: "All tours", placeholder: "Type here" %>
               </div>
               <%# <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <%# <span aria-hidden="true">&times;</span> %>
               <%# </button> %>
-
               <%# <div class="modal-body">
               ...
-              <%# </div>  %>
+              </div> %>
               <div class="modales">
                 <%= form.submit "Find your Tour", class:"btn-search" %>
               </div>

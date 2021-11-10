@@ -1,0 +1,5 @@
+meta_product_name: "Caminante!"
+meta_title: "Caminante! - Augmented Reality in Your Favorite Places"
+meta_description: "Brings augmented reality to tourism, improving the feel and look of the main touristic places in a city"
+meta_image: "covercard.jpg" # should exist in `app/assets/images/`
+twitter_account: "@alexisgnzlz"   # required for Twitter Cards
