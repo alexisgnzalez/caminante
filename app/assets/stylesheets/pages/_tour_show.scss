@@ -5,54 +5,35 @@ p {
   word-break: break-all;
 }
 .texto {
-  color: white;
-}
-.br {
-  border-radius: 8px;
-}
-.tarjeta-title-rating {
-  width: 100%;
-  border-radius: 20px;
   color: #322222;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-  background: #8E6AB0;
-  
-  .tarjeta-title-rating {
-    font-size: 22px;
-    font-weight: bold;
+  font-weight: 600;
+  text-align: center;
+}
+.linea {
+  border-bottom: 1px solid #a79e9e9e;
+  width: 100%;
+}
+.sm-carrusel {
+  border-radius: 8px;
+  height: 280px !important;
+  width: 100% !important;
+}
+.lg-carrusel {
+  border-radius: 8px;
+  height: 75vh !important;
+  width: 100% !important;
+  object-fit: cover;
+}
+@media (max-width: 575px) {
+  .lg-carrusel {
+    height: 280px !important;
+    width: 100% !important;
+    border-radius: 8px;
   }
-
-  .estrellas {
-    display: flex;
-    justify-content: space-evenly;
-    font-size: 36px;
-  }
-  .estrellas button {
-    background-color: initial;
-    border: 0;
-    color: rgb(255, 215, 0);
-    transition: 0.5s all;
-  }
-  .estrellas button:active, button:hover {
-    cursor: pointer;
-    transform: rotate(360deg);
-    color: yellowgreen;
-    -webkit-box-reflect: below 0px linear-gradient(transparent, #0009);
-  }
-  button:nth-child(1):hover ~ button {
-    transform: rotate(360deg);
-  }
-  button:nth-child(2):hover ~ button {
-    transform: rotate(360deg);
-  }
-  button:nth-child(3):hover ~ button {
-    transform: rotate(360deg);
-  }
-  button:nth-child(4):hover ~ button {
-    transform: rotate(360deg);
-  }
-  button:nth-child(5):hover ~ button {
-    transform: rotate(360deg);
+  .sm-carrusel {
+    border-radius: 8px;
+    height: 200px !important;
+    width: 100% !important;
   }
 }
 
@@ -78,31 +59,55 @@ p {
 
 @media (max-width: 499px) {
   .btn-start {
-    bottom: -12%;
+    bottom: -9%;
   }
 }
 
 @media (min-width: 768px) {
   .btn-start {
-    bottom: -8%;
+    bottom: -5%;
   }
 }
 h2, h3 {
   color: #322222;
 }
-.tarjeta-description {
+.tarjeta {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
   width: 100%;
   border-radius: 20px;
   background: #fff;
   color: #322222;
-}
-.tarjeta-locat {
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-  width: 100%;
-  border-radius: 20px;
-  background: white;
-  color: #322222;
+  .estrellas {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 32px;
+  }
+  .estrellas button {
+    background-color: initial;
+    border: 0;
+    color: #F78B64;
+    transition: 0.5s all;
+  }
+  .estrellas button:active, button:hover {
+    cursor: pointer;
+    transform: rotate(360deg);
+    -webkit-box-reflect: below 0px linear-gradient(transparent, #0009);
+  }
+  button:nth-child(1):hover ~ button {
+    transform: rotate(360deg);
+  }
+  button:nth-child(2):hover ~ button {
+    transform: rotate(360deg);
+  }
+  button:nth-child(3):hover ~ button {
+    transform: rotate(360deg);
+  }
+  button:nth-child(4):hover ~ button {
+    transform: rotate(360deg);
+  }
+  button:nth-child(5):hover ~ button {
+    transform: rotate(360deg);
+  }
 }
 
 .s-area{ 

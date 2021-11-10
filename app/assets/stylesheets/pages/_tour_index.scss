@@ -1,9 +1,19 @@
 .banner-index {
-  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(banner-index.jpg);
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/alexisgonzalez/image/upload/v1636555871/banner_caminante_index_uswsza.jpg);
   background-size: cover;
   background-position: center;  
   padding: 20px 0;
-  height: 50vh;
+  height: 70vh;
+  margin-bottom: 20px !important;
+}
+@media (max-width: 575px) {
+  .banner-index {
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/alexisgonzalez/image/upload/v1636555871/banner_caminante_index_uswsza.jpg);
+    background-size: cover;
+    background-position: center;  
+    padding: 20px 0;
+    height: 50vh;
+  }
 }
 
 .banner-index h1 {
@@ -16,13 +26,13 @@
 
 .banner-index p {
   text-align: center;
-  font-size: 18px;
+  font-size: 19px;
   color: white;
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
-.tarjeta-par {
+.tarjet {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
   width: 100%;
   border-radius: 20px;
@@ -40,22 +50,43 @@
     font-weight: bold;
   }
 
-  .img-sm {
+  .img {
     border-radius: 15px ;
-    width: 100%;
-    height: 170px;
+    width: 100% !important;
+    height: 280px !important;
     border-style: none;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  }
+  @media (max-width: 575px) {
+    .img {
+      border-radius: 8px;
+      height: 200px !important;
+      width: 100% !important;
+      border-style: none;
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    }
   }
 
   .estrellas {
     display: flex;
-    font-size: 24px;
+    font-size: 30px;
+    i {
+      margin-right: 12px;
+    }
+  }
+  @media (max-width: 575px) {
+    .estrellas {
+      display: flex;
+      font-size: 24px;
+      i {
+        margin-right: 4px;
+      }
+    }
   }
   .estrellas button {
     background-color: initial;
     border: 0;
-    color: rgb(255, 215, 0);
+    color: #F78B64;
     transition: 0.5s all;
     font-weight: bold;
   }
@@ -86,8 +117,20 @@
     font-size: 18px;
     background: #8E6AB0;
     border-radius: 36px;
-    padding: 12px 24px;
+    padding: 12px 36px;
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+  } 
+  @media (max-width: 575px) {
+    .btn-more-info {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      background: #8E6AB0;
+      border-radius: 36px;
+      padding: 10px 28px;
+      box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    } 
   }
 }
 
