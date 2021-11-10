@@ -31,12 +31,12 @@
         <% end %>
 
         <% @tours.each_with_index do |tour|%>
-          <div class="card-body tarjeta-par mt-1 mb-3">
+          <div class="card-body tarjet mt-1 mb-3">
             <h1 class="text-center"><%= tour.name%></h1><br>
             <% if tour.photos.empty? %>
-              <%= cl_image_tag "https://res.cloudinary.com/alexisgonzalez/image/upload/v1636379457/location_placeholder_gjvdk4.jpg", alt: "Tour", class: "img-sm" %>
+              <%= cl_image_tag "https://res.cloudinary.com/alexisgonzalez/image/upload/v1636379457/location_placeholder_gjvdk4.jpg", alt: "Tour", class: "img" %>
             <% else %>
-              <%= cl_image_tag tour.photos.first.key, class: "img-sm" %><br>
+              <%= cl_image_tag tour.photos.first.key, class: "img" %><br>
             <% end %>
             <div class="d-flex justify-content-around mt-3">
               <div class="estrellas">
