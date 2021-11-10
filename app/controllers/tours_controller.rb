@@ -18,6 +18,8 @@ class ToursController < ApplicationController
       else
         @tours = Tour.all
       end
+    else
+      @tours = Tour.all
     end
   end
 
