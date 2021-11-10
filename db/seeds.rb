@@ -2,6 +2,7 @@
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
 # Examples:
+require "faker"
 puts "Deleting all bookings"
 Booking.delete_all
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
@@ -18,7 +19,7 @@ alexis = User.first
 puts "creating tours"
 10.times do |index|
   tour = Tour.create(
-    name: "Centro de Caracas",
+    name: Faker::Movie.title,
     description: "Probarás la mejor combinación de Golfeado con café artesanal de la ciudad, podrás interactuar con las ardillas negras en la Plaza Bolívar, luego puedes elegir comer una exquisita cocada para luego conocer a Simón Bolívar en su propia casa en la última parada del tour.",
     rating: 5,
     long: -66.9138514995575,

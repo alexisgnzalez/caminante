@@ -10,29 +10,37 @@
   font-weight: bold;
 }
 .btn-search {
-  width: 100%;
   background-color: #E15B48;
-  margin-top: 20px;
   border-radius: 8px;
   color: white;
   font-weight: 600;
   display: block;
   border: white;
-  margin-left: -57px;
+  margin-left: 0px;
   padding: 5px;
+  width: 100%;
+  margin-top: 12px;
   &:hover {
     background-color: #322222;
     font-weight: bold;
   }
 }
-
+.form {
+  margin-top: 5px;
+}
 .modal-title {
   font-weight: bold;
+  padding: 0px 175px;
+}
+
+.form-inline .form-control {
+  width: 467px;
+  display: flex;
 }
 
 .form-inline {
   display: block;
-}
+  }
 
 .form-control {
   border: 3px bold #322222;
@@ -40,4 +48,83 @@
 
 .modal-header {
   background-color: #fce9e6;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
 }
+
+.modal {
+  margin-top: 150px;
+}
+
+h5 {
+  justify-content: center;
+}
+
+@media(max-width: 700px) {
+    .modal-content {
+    color: #322222;
+    border-radius: 50px;
+    justify-content: center;
+    flex-direction: column
+  }
+
+  .modales {
+    border-radius: 5px;
+    display: block;
+    font-weight: bold;
+  }
+  .btn-search {
+    width: 100%;
+    background-color: #E15B48;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    display: block;
+    border: white;
+    padding: 5px;
+    margin-left: 0px;
+    &:hover {
+      background-color: #322222;
+      font-weight: bold;
+    }
+  }
+
+  .modal-title {
+    font-weight: bold;
+    padding: 0px 104px;
+  }
+
+  .form-inline .form-control {
+    width: 323px;
+    display: flex;
+    border-color: lightgray;
+  }
+
+  .form-inline {
+    display: block;
+  }
+
+  .form-control {
+    border: 3px bold #322222;
+  }
+
+  .modal-header {
+    background-color: #fce9e6;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  .modal {
+    margin-top: 250px;
+    border-radius: 30px;
+  }
+
+}
+    // width: 337px;
+    // display: flex;
+    // flex-direction: column;
+    // flex-wrap: nowrap;
+    // justify-content: flex-start;
+    // align-items: stretch;
