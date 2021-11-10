@@ -71,7 +71,7 @@ const initMap = () => {
       console.log(tour.counter)
       if (tour.dataset.counter == (index - 1)) {
         new mapboxgl.Marker({
-          'color': 'red'
+          'color': '#664191'
         })
             .setLngLat([location.dataset.long, location.dataset.lat])
             .addTo(map);
@@ -124,7 +124,7 @@ const initMap = () => {
         'type': 'fill-extrusion',
         'minzoom': 15,
         'paint': {
-          'fill-extrusion-color': 'grey',
+          'fill-extrusion-color': '#664191',
 
           // use an 'interpolate' expression to add a smooth transition effect to the
           // buildings as the user zooms in
@@ -146,7 +146,7 @@ const initMap = () => {
             15.05,
             ['get', 'min_height']
           ],
-          'fill-extrusion-opacity': 0.6
+          'fill-extrusion-opacity': 0.4
         }
       });
 
@@ -169,8 +169,6 @@ const initMap = () => {
         'type': 'symbol',
         'source': 'points',
         'layout': {
-          'icon-image': 'custom-marker',
-          // get the title name from the source's "title" property
           'text-field': ['get', 'title'],
           'text-font': [
             'Open Sans Semibold',

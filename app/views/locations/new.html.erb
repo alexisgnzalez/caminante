@@ -1,4 +1,4 @@
-<div class="container mb-4">
+<div class="container mb-2">
   <div class="row justify-content-center">
     <div class="col-xs-12 col-sm-6 col-sm-offset-3">
     <div class="form-standard mb-5">
@@ -10,6 +10,7 @@
         <%= f.input :lat %>
         <%= f.association :tour %>
         <%= f.input :model, as: :file, label: "3D Model" %>
+        <%= f.input :view, as: :file, label: "360 View" %>
         <%= f.input :photos, as: :file, input_html: { multiple: true } %>
         <%= f.button :submit, class: "btn-login" %>
       <% end %>
