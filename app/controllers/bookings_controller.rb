@@ -20,15 +20,15 @@ class BookingsController < ApplicationController
     @booking.counter += 1
     @booking.save
     if @booking.counter >= @tour.locations.size
-      @booking.update(finished: true)
-      redirect_to tour_path(id: @tour.id, booking_id: @booking.id)
+      # @booking.update(finished: true)
+      redirect_to tour_path(@tour)
     end
   end
 
-  def update_stars
-    @booking = Booking.find(params[:booking_id])
-		@booking.rating = params[:rating]
-		@booking.save
-		redirect_to tours_path
-  end
+  # def update_stars
+  #   @booking = Booking.find(params[:booking_id])
+	# 	@booking.rating = params[:rating]
+	# 	@booking.save
+	# 	redirect_to tours_path
+  # end
 end

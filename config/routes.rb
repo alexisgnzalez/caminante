@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     end
     resources :bookings, only: %i[new] do
       member do
-        patch :update_stars
+        # patch :update_stars
         get :map
         get :ar_experience
       end

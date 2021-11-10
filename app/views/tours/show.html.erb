@@ -129,22 +129,6 @@
 					</div>
 				<% end %>
 				<br>
-
-				<% if @booking.present? && @booking.finished? %>
-					<div class="container">
-						<div class="row">
-							<div class="col-xs-4">
-								<%= simple_form_for [@tour, @booking], url: update_stars_tour_booking_path(@tour) do |f| %>
-									<%= f.input :rating, collection: (1..5).to_a, label: "Rate us" %>
-									<div style="display:none;">
-										<%= f.submit "ok", class: "hidden" %>
-									</div>
-								<% end %>
-							</div>
-						</div>
-					</div>
-				<% end %>
-				<br>
 				
 			</div>
 		</div> <!-- row -->
