@@ -22,6 +22,7 @@ class ToursController < ApplicationController
   end
 
   def show
+    # @booking = params[:booking_id].present? ? Booking.where(id: params[:booking_id]).take : nil
   end
 
   def new
