@@ -1,6 +1,7 @@
 .navbar-lewagon {
   justify-content: space-between;
   background-color: white;
+  padding: 8.191px 0px;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -14,6 +15,7 @@
 .logo {
  color: #322222;
  font-weight: bold;
+ padding-left: 11px;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -57,4 +59,23 @@
 
 .navbar-light .navbar-toggler {
   border-color: white;
+}
+
+.bi {
+  color: #322222;
+  font-size: 31px;
+  padding: 22px 0px;
+  font-weight: bold;
+    &:hover {
+    color: #e15b48;
+    font-weight: bold;
+  }
+}
+
+@media(max-width: 700px) {
+  .navbar-lewagon {
+    justify-content: space-between;
+    background-color: white;
+    padding: 7.438px;
+  }
 }
