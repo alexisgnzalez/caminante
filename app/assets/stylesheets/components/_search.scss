@@ -1,0 +1,43 @@
+.modal-content {
+  color: #322222;
+  border-radius: 3px;
+  justify-content: center;
+}
+
+.modales {
+  border-radius: 5px;
+  display: block;
+  font-weight: bold;
+}
+.btn-search {
+  width: 100%;
+  background-color: #E15B48;
+  margin-top: 20px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  display: block;
+  border: white;
+  margin-left: -57px;
+  padding: 5px;
+  &:hover {
+    background-color: #322222;
+    font-weight: bold;
+  }
+}
+
+.modal-title {
+  font-weight: bold;
+}
+
+.form-inline {
+  display: block;
+}
+
+.form-control {
+  border: 3px bold #322222;
+}
+
+.modal-header {
+  background-color: #fce9e6;
+}

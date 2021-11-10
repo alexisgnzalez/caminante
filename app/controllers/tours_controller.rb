@@ -6,7 +6,19 @@ class ToursController < ApplicationController
   end
 
   def index
-    @tours = Tour.all
+    @search = params[:query]
+    if @search.present?
+      @tour = @search[:tour]
+      if @tour.present?
+        #@tours =Tour.where(name: @tour)
+        sql_query = "name ILIKE :query OR description ILIKE :query"
+        @tours = Tour.where(sql_query, query: "%#{@tour}%")
+        #@tours = Tour.joins(:locations).where(sql_query, query: "%#{@tour}%")
+        #@tours = Tour.search_by_description(@tour)
+      else
+        @tours = Tour.all
+      end
+    end
   end
 
   def show
