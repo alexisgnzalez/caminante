@@ -1,5 +1,5 @@
 .banner {
-  background-image: linear-gradient(rgba(255, 227, 227, 0),rgba(0, 0, 0, 0.015)), url("https://res.cloudinary.com/alexisgonzalez/image/upload/v1636379687/caminante_banner_desktop_i3wrup.jpg");
+  background-image: linear-gradient(rgba(255, 235, 235, 0),rgba(0, 0, 0, 0.015)), url("https://res.cloudinary.com/alexisgonzalez/image/upload/v1636379687/caminante_banner_desktop_i3wrup.jpg");
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -32,7 +32,7 @@
 
 @media(max-width: 700px) {
   .banner {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.0),rgba(255, 227, 227, 0.5)), url("https://res.cloudinary.com/alexisgonzalez/image/upload/v1636379637/caminante_banner_mobile_jay7rk.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.0),rgba(255, 227, 227, 0.2)), url("https://res.cloudinary.com/alexisgonzalez/image/upload/v1636379637/caminante_banner_mobile_jay7rk.jpg");
     background-position: center 0px;
     background-size: cover;
     background-repeat: no-repeat;

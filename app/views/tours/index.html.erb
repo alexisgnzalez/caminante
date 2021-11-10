@@ -1,3 +1,9 @@
+<div class="banner-index mb-2">
+  <div class="container text-center">
+    <h1>Available Tours</h1>
+    <p>Travel with us, Travel with <strong><em>Caminante!</em></strong></p>
+  </div>
+</div>
 <div>
   <div class="area" >
     <ul class="circles">
@@ -11,50 +17,51 @@
       <li></li>
       <li></li>
       <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
     </ul>
   </div>
-
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col-lg-6 col-sm-4 col-sm-offset-4 justify-content-center d-flex flex-column align-items-center">
+			<div class="col-lg-6 col-sm-4 col-sm-offset-4 justify-content-center d-flex flex-column align-items-center">
         <% if @tours.empty? %>
-          <h2 class="d-flex justify-content-center align-items-center bg-white p-2 rounded mt-5"><strong>Looks like we didn't find your Tour mate, sorry 😥</strong></h2>
+          <h2 class="d-flex justify-content-center align-items-center bg-white p-2 rounded"><strong>Looks like we didn't find your Tour mate, sorry 😥</strong></h2>
         <% end %>
-        <% @tours.each_with_index do |tour|%>
-          <div class="<%= tour.id.even? ? "tarjeta-par" : "tarjeta-impar" %> d-flex justify-content-center mb-5">
-            <div class="d-flex justify-content-between p-3 px-lg-5 w-100">
-              <div>
-                <h1><%= tour.name%></h1>
-                <div class="estrellas mb-3">
-                  <button>
-                    <i class="bi bi-star-fill"></i>
-                  </button>
-                  <button>
-                    <i class="bi bi-star-fill"></i>
-                  </button>
-                  <button>
-                    <i class="bi bi-star-fill"></i>
-                  </button>
-                  <button>
-                    <i class="bi bi-star-fill"></i>
-                  </button>
-                  <button>
-                    <i class="bi bi-star-fill"></i>
-                  </button>
-                </div> <!-- estrellas -->
-                <%= link_to "More Info", tour_path(tour), class: "btn-more-info" %>
-              </div>
-              <% if tour.photos.empty? %>
-                <%= cl_image_tag "https://res.cloudinary.com/alexisgonzalez/image/upload/v1636379457/location_placeholder_gjvdk4.jpg", alt: "Tour", class: "img-sm" %>
-              <% else %>
-                <%= cl_image_tag tour.photos.first.key, class: "img-sm" %>
-              <% end %>
-            </div>
-            <div class="<%= tour.id.even? ? "second-card-impar" : "second-card-par" %> p-3 w-75"></div> <!-- second-card -->
-          </div> <!-- tarjeta-par/impar -->
-        <% end %>
-      </div>
-    </div> <!-- row -->
-  </div> <!-- container -->
 
+        <% @tours.each_with_index do |tour|%>
+          <div class="card-body tarjeta-par mt-1 mb-3">
+            <h1 class="text-center"><%= tour.name%></h1><br>
+            <% if tour.photos.empty? %>
+              <%= cl_image_tag "https://res.cloudinary.com/alexisgonzalez/image/upload/v1636379457/location_placeholder_gjvdk4.jpg", alt: "Tour", class: "img-sm" %>
+            <% else %>
+              <%= cl_image_tag tour.photos.first.key, class: "img-sm" %><br>
+            <% end %>
+            <div class="d-flex justify-content-around mt-3">
+              <div class="estrellas">
+                <button>
+                  <i class="bi bi-star-fill"></i>
+                </button>
+                <button>
+                  <i class="bi bi-star-fill"></i>
+                </button>
+                <button>
+                  <i class="bi bi-star-fill"></i>
+                </button>
+                <button>
+                  <i class="bi bi-star-fill"></i>
+                </button>
+                <button>
+                  <i class="bi bi-star-fill"></i>
+                </button>
+              </div> <!-- estrellas -->
+              <%= link_to "More Info", tour_path(tour), class: "btn-more-info" %>
+            </div>
+          </div>
+        <% end %>
+        <br>
+      </div>
+    </div>
+  </div> <!-- container -->
 </div>
