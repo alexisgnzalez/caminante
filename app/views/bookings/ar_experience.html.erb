@@ -56,33 +56,51 @@
 <a-scene style="with: 100%; height: 780px"
   device-orientation-permission-ui="enabled: false"
   ar-mode-ui="enabled: false">
-  <%# <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box> %>
-  <%# <a-sphere position="0 1.25 -10" radius="1.25" color="#EF2D5E"></a-sphere> %>
-  <%# <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-  <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane> %>
-  <%# <a-sky color="#ECECEC"></a-sky> %>
-  <%# <a-box color="blue" position="0 2 -8" rotation="0 45 45" scale="2 2 2"
-         animation="property: object3D.position.y; to: 2.2; dir: alternate; dur: 2000; loop: true">
-  </a-box> %>
 
-  <a-entity
-    gltf-model= <%= "#{cloudinary_url(@tour.locations[@booking.counter].model.key, :resource_type => :raw)}.glb" %>
-    autoscale="3"
-    position="0 0 -5"
-    animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
-  </a-entity>
+  <% if (@tour.locations[@booking.counter].model.attached? && @tour.locations[@booking.counter].view.attached?)%>
 
-  <a-text
-    font="kelsonsans"
-    value="<%= @tour.locations[@booking.counter].name %>"
-    width="6" position="-1 3 -5"
-    rotation="0 0 0"
-    color="#322222">
-  </a-text>
+    <a-entity
+      gltf-model= <%= "#{cloudinary_url(@tour.locations[@booking.counter].model.key, :resource_type => :raw)}.glb" %>
+      autoscale="3"
+      position="0 0 -5"
+      animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
+    </a-entity>
 
-  <a-sky
-    src="<%= cloudinary_url(@tour.locations[@booking.counter].view.key) %>"
-    hide-in-ar-mode>
-  </a-sky>
+    <a-text
+      font="kelsonsans"
+      value="<%= @tour.locations[@booking.counter].name %>"
+      width="6" position="-1 3 -5"
+      rotation="0 0 0"
+      color="#322222">
+    </a-text>
+
+    <a-sky
+      src="<%= cloudinary_url(@tour.locations[@booking.counter].view.key) %>"
+      hide-in-ar-mode>
+    </a-sky>
+
+  <% else %>
+
+    <a-entity
+      gltf-model="https://res.cloudinary.com/alexisgonzalez/image/upload/v1636576119/Star_uvfsbj.glb"
+      autoscale="3"
+      position="0 0 -5"
+      animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
+    </a-entity>
+
+    <a-text
+      font="kelsonsans"
+      value="Under Construction"
+      width="6" position="-1 3 -5"
+      rotation="0 0 0"
+      color="white">
+    </a-text>
+
+    <a-sky
+      src="https://res.cloudinary.com/alexisgonzalez/image/upload/v1636576135/CasaCampo360_binmkh.jpg"
+      hide-in-ar-mode>
+    </a-sky>
+
+  <% end %>
 
 </a-scene>
