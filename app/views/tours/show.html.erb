@@ -87,7 +87,7 @@
 					<div class="card-body text-left tarjeta mb-3">
 						<h3 class="text-center"><%= location.name %></h3><br>
 						<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
-							<div class="carousel-inner d-flex justify-content-center mb-3">
+							<div class="carousel-inner mb-3">
 								<% if location.photos.empty? %>
 									<div class="carousel-item active">
 										<%= image_tag "https://res.cloudinary.com/alexisgonzalez/image/upload/v1636379461/tour_placeholder_pxovv7.jpg", alt: "Tour", class: "d-block sm-carrusel" %>
@@ -110,7 +110,6 @@
 											</div>
 										<% end %>
 									<% end %>
-									<%= cl_image_tag location.photos.first.key, class: "sm-carrusel" %>
 								<% end %>
 							</div>
 							<button class="carousel-control-prev" type="button" data-target="#carouselExampleFade" data-slide="prev">
