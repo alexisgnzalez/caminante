@@ -55,7 +55,7 @@
 			<%= link_to "Start", new_tour_booking_path(@tour), class: "btn-start text-uppercase text-decoration-none" %>
 		</div> <!-- carrusel -->
 		<div class="row justify-content-center">
-			<div class="col-lg-6 col-sm-4 col-sm-offset-4 justify-content-center d-flex flex-column align-items-center">
+			<div class="col-lg-6 col-sm-12 justify-content-center d-flex flex-column align-items-center">
 				<div class="card-body tarjeta mt-5">
 					<h2 class="texto"><%= @tour.name %></h2>
 					<div class="estrellas mb-3 mt-2">
@@ -87,7 +87,7 @@
 					<div class="card-body text-left tarjeta mb-3">
 						<h3 class="text-center"><%= location.name %></h3><br>
 						<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
-							<div class="carousel-inner d-flex justify-content-center mb-3">
+							<div class="carousel-inner mb-3">
 								<% if location.photos.empty? %>
 									<div class="carousel-item active">
 										<%= image_tag "https://res.cloudinary.com/alexisgonzalez/image/upload/v1636379461/tour_placeholder_pxovv7.jpg", alt: "Tour", class: "d-block sm-carrusel" %>
@@ -110,7 +110,6 @@
 											</div>
 										<% end %>
 									<% end %>
-									<%= cl_image_tag location.photos.first.key, class: "sm-carrusel" %>
 								<% end %>
 							</div>
 							<button class="carousel-control-prev" type="button" data-target="#carouselExampleFade" data-slide="prev">
@@ -131,8 +130,3 @@
 		</div> <!-- row -->
 	</div> <!-- container -->
 </div>
-
-<!-- app/views/offers/show.html.erb -->
-<%# <% content_for :meta_title, "#{@tour.name} is on #{DEFAULT_META["meta_product_name"]}" %>
-<%# <% content_for :meta_description, @tour.description %>
-<%# <% content_for :meta_image, cl_image_tag @tour.photos.first.key %>
