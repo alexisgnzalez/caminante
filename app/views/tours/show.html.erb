@@ -22,13 +22,13 @@
 			<div class="carousel-inner">
 				<% if @tour.photos.empty? %>
 					<div class="carousel-item active">
-						<%= cl_image_tag "https://res.cloudinary.com/alexisgonzalez/image/upload/v1636379461/tour_placeholder_pxovv7.jpg", alt: "Tour", class: "d-block lg-carrusel" %>
+						<%= image_tag "https://res.cloudinary.com/alexisgonzalez/image/upload/v1636379461/tour_placeholder_pxovv7.jpg", alt: "Tour", class: "d-block lg-carrusel" %>
 					</div>
 					<div class="carousel-item">
-						<%= cl_image_tag "https://res.cloudinary.com/alexisgonzalez/image/upload/v1636379461/tour_placeholder_pxovv7.jpg", alt: "Tour", class: "d-block lg-carrusel" %>
+						<%= image_tag "https://res.cloudinary.com/alexisgonzalez/image/upload/v1636379461/tour_placeholder_pxovv7.jpg", alt: "Tour", class: "d-block lg-carrusel" %>
 					</div>
 					<div class="carousel-item">
-						<%= cl_image_tag "https://res.cloudinary.com/alexisgonzalez/image/upload/v1636379461/tour_placeholder_pxovv7.jpg", alt: "Tour", class: "d-block lg-carrusel" %>
+						<%= image_tag "https://res.cloudinary.com/alexisgonzalez/image/upload/v1636379461/tour_placeholder_pxovv7.jpg", alt: "Tour", class: "d-block lg-carrusel" %>
 					</div>
 				<% else %>
 					<% @tour.photos.each_with_index do |photo, index| %>
@@ -90,13 +90,13 @@
 							<div class="carousel-inner d-flex justify-content-center mb-3">
 								<% if location.photos.empty? %>
 									<div class="carousel-item active">
-										<%= cl_image_tag "https://res.cloudinary.com/alexisgonzalez/image/upload/v1636379461/tour_placeholder_pxovv7.jpg", alt: "Tour", class: "sm-carrusel" %>
+										<%= image_tag "https://res.cloudinary.com/alexisgonzalez/image/upload/v1636379461/tour_placeholder_pxovv7.jpg", alt: "Tour", class: "d-block sm-carrusel" %>
 									</div>
 									<div class="carousel-item">
-										<%= cl_image_tag "https://res.cloudinary.com/alexisgonzalez/image/upload/v1636379461/tour_placeholder_pxovv7.jpg", alt: "Tour", class: "sm-carrusel" %>
+										<%= image_tag "https://res.cloudinary.com/alexisgonzalez/image/upload/v1636379461/tour_placeholder_pxovv7.jpg", alt: "Tour", class: "d-block sm-carrusel" %>
 									</div>
 									<div class="carousel-item">
-										<%= cl_image_tag "https://res.cloudinary.com/alexisgonzalez/image/upload/v1636379461/tour_placeholder_pxovv7.jpg", alt: "Tour", class: "sm-carrusel" %>
+										<%= image_tag "https://res.cloudinary.com/alexisgonzalez/image/upload/v1636379461/tour_placeholder_pxovv7.jpg", alt: "Tour", class: "d-block sm-carrusel" %>
 									</div>
 								<% else %>
 									<% location.photos.each_with_index do |photo, index| %>
