@@ -49,11 +49,12 @@ p {
   border-radius: 36px;
   padding: 14px 40px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  bottom: -26px;
 }
 
 @media (min-width: 500px) {
   .btn-start {
-    bottom: -10%;
+    bottom: -5%;
   }
 }
 
