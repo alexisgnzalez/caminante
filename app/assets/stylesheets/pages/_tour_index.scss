@@ -73,13 +73,16 @@
     i {
       margin-right: 12px;
     }
+    .bi {
+      color: #F78B64;
+    }
   }
   @media (max-width: 575px) {
     .estrellas {
       display: flex;
       font-size: 24px;
       i {
-        margin-right: 4px;
+        margin-right: 1px;
       }
     }
   }

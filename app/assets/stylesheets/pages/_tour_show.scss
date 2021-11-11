@@ -81,6 +81,9 @@ h2, h3 {
     display: flex;
     justify-content: space-evenly;
     font-size: 32px;
+    .bi {
+      color: #F78B64;
+    }
   }
   .estrellas button {
     background-color: initial;
